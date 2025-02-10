@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5zT+a/cUHNokfRlavdowfVrUVXD6n4EksB2KfglxO/jZD3faWbpSWZRZqgYktQ1rLRyO88DYPpW4eEbPp1F7wQ==",
+  "dgSpecHash": "VeQCQSX3029KbuxN1UYxTckSpKyZHCSY2Z1yYK07Vu9nDVyaBy1xYV5TKzrdTECWuXOnbTN+uEkli6QKLXa+rQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sania\\OneDrive\\Робочий стіл\\SelfStuding\\RailwayProject\\Server\\Server.csproj",
+  "projectFilePath": "C:\\Users\\sania\\OneDrive\\Робочий стіл\\SelfStuding\\RailwayProject\\Backend\\Server\\Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sania\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\sania\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

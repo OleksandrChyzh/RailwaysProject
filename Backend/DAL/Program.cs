@@ -1,15 +1,21 @@
+using DAL.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Додаємо підключення до бази даних
+builder.Services.AddDbContext<RailwayContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// Додаємо інші сервіси в контейнер
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Додаткові налаштування для Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Налаштування HTTP-пайплайну
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
