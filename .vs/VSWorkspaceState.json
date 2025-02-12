@@ -2,14 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\Frontend",
+    "\\Frontend\\.idea",
     "\\Frontend\\RailwayAngular",
     "\\Frontend\\RailwayAngular\\railway-app",
     "\\Frontend\\RailwayAngular\\railway-app\\.angular",
     "\\Frontend\\RailwayAngular\\railway-app\\public",
     "\\Frontend\\RailwayAngular\\railway-app\\src",
     "\\Frontend\\RailwayAngular\\railway-app\\src\\app",
-    "\\Frontend\\RailwayAngular\\railway-app\\src\\app\\pages",
-    "\\Frontend\\RailwayAngular\\railway-app\\src\\app\\pages\\home"
+    "\\Frontend\\RailwayAngular\\railway-app\\src\\app\\home"
   ],
   "PreviewInSolutionExplorer": false
 }
