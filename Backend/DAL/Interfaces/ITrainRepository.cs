@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using DAL.Models;
+
 namespace DAL.Interfaces
 {
-    internal interface ITrainRepository
+    public interface ITrainRepository : IRepository<Train>
     {
     }
 }
