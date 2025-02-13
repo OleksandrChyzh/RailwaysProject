@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DAL.Models;
 
-public partial class User
+public partial class User: BaseEntity
 {
     public string Email { get; set; } = null!;
 

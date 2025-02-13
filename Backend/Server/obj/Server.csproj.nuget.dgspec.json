@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andri\\RailwaysProject\\Backend\\Server\\Server.csproj": {}
+    "C:\\Users\\sania\\OneDrive\\Робочий стіл\\SelfStuding\\RailwayProject\\Backend\\Server\\Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andri\\RailwaysProject\\Backend\\Server\\Server.csproj": {
+    "C:\\Users\\sania\\OneDrive\\Робочий стіл\\SelfStuding\\RailwayProject\\Backend\\Server\\Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andri\\RailwaysProject\\Backend\\Server\\Server.csproj",
+        "projectUniqueName": "C:\\Users\\sania\\OneDrive\\Робочий стіл\\SelfStuding\\RailwayProject\\Backend\\Server\\Server.csproj",
         "projectName": "Server",
-        "projectPath": "C:\\Users\\andri\\RailwaysProject\\Backend\\Server\\Server.csproj",
-        "packagesPath": "C:\\Users\\andri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andri\\RailwaysProject\\Backend\\Server\\obj\\",
+        "projectPath": "C:\\Users\\sania\\OneDrive\\Робочий стіл\\SelfStuding\\RailwayProject\\Backend\\Server\\Server.csproj",
+        "packagesPath": "C:\\Users\\sania\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sania\\OneDrive\\Робочий стіл\\SelfStuding\\RailwayProject\\Backend\\Server\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\andri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sania\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -70,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

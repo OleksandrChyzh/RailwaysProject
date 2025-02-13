@@ -15,7 +15,7 @@ namespace DAL.Repositories
 
         public async Task<User?> GetByEmailAsync(string email)
         {
-            return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+            return await (_context as RailwayContext)!.Users.FirstOrDefaultAsync(u => u.Email == email);
         }
     }
 }

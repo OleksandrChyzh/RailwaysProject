@@ -8,14 +8,18 @@ using System.Linq.Expressions;
 
 namespace DAL.Interfaces
 {
-    public interface IRepository<T> where T : class
+    public interface IRepository<TEntity> where TEntity : class
     {
-        Task<IEnumerable<T>> GetAllAsync();
-        Task<T?> GetByIdAsync(object id);
-        Task AddAsync(T entity);
-        Task UpdateAsync(T entity);
-        Task DeleteAsync(object id);
-        Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate);
-        Task SaveAsync();
+        Task<IEnumerable<TEntity>> GetAllAsync();
+
+        Task<TEntity> GetByIdAsync(int id);
+
+        Task AddAsync(TEntity entity);
+
+        void Delete(TEntity entity);
+
+        Task DeleteByIdAsync(int id);
+
+        void Update(TEntity entity);
     }
 }

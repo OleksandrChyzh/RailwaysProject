@@ -3,10 +3,8 @@ using System.Collections.Generic;
 
 namespace DAL.Models;
 
-public partial class Ticket
+public partial class Ticket: BaseEntity
 {
-    public long Id { get; set; }
-
     public string LastName { get; set; } = null!;
 
     public string FirstName { get; set; } = null!;

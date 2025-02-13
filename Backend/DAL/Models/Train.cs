@@ -3,10 +3,8 @@ using System.Collections.Generic;
 
 namespace DAL.Models;
 
-public partial class Train
+public partial class Train:BaseEntity
 {
-    public long Id { get; set; }
-
     public string TrainName { get; set; } = null!;
 
     public long PricePerInterval { get; set; }

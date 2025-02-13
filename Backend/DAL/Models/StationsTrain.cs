@@ -3,9 +3,8 @@ using System.Collections.Generic;
 
 namespace DAL.Models;
 
-public partial class StationsTrain
+public partial class StationsTrain: BaseEntity
 {
-    public long Id { get; set; }
 
     public long TrainNumber { get; set; }
 
