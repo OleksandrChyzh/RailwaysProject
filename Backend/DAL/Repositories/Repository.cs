@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using DAL.Interfaces;
-using DAL.Models;
+using DAL.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace DAL.Repositories

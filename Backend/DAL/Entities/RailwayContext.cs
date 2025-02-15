@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace DAL.Models;
+namespace DAL.Entities;
 
 public partial class RailwayContext : DbContext
 {
