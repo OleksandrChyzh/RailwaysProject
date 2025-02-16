@@ -17,9 +17,9 @@ public partial class Ticket: BaseEntity
 
     public long StationTrainId1 { get; set; }
 
-    public long SationTrainId2 { get; set; }
+    public long StationTrainId2 { get; set; }
 
-    public virtual StationsTrain SationTrainId2Navigation { get; set; } = null!;
+    public virtual StationsTrain StationTrainId2Navigation { get; set; } = null!;
 
     public virtual StationsTrain StationTrainId1Navigation { get; set; } = null!;
 
