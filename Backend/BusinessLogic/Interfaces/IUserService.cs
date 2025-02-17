@@ -10,5 +10,6 @@ namespace BusinessLogic.Interfaces
 {
     internal interface IUserService : ICrud<UserModel>
     {
+        Task<UserModel> GetUserByEmail (string email);
     }
 }
