@@ -66,8 +66,8 @@ public partial class RailwayContext : DbContext
             entity.Property(e => e.LastName).HasMaxLength(50);
             entity.Property(e => e.UserEmail).HasMaxLength(50);
 
-            entity.HasOne(d => d.SationTrainId2Navigation).WithMany(p => p.TicketSationTrainId2Navigations)
-                .HasForeignKey(d => d.SationTrainId2)
+            entity.HasOne(d => d.StationTrainId2Navigation).WithMany(p => p.TicketSationTrainId2Navigations)
+                .HasForeignKey(d => d.StationTrainId2)
                 .HasConstraintName("StationTrainFK2");
 
             entity.HasOne(d => d.StationTrainId1Navigation).WithMany(p => p.TicketStationTrainId1Navigations)

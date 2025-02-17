@@ -10,3 +10,4 @@ C:\Users\sania\OneDrive\Робочий стіл\SelfStuding\RailwayProject\Backe
 C:\Users\sania\OneDrive\Робочий стіл\SelfStuding\RailwayProject\Backend\BusinessLogic\obj\Debug\net8.0\refint\BusinessLogic.dll
 C:\Users\sania\OneDrive\Робочий стіл\SelfStuding\RailwayProject\Backend\BusinessLogic\obj\Debug\net8.0\BusinessLogic.pdb
 C:\Users\sania\OneDrive\Робочий стіл\SelfStuding\RailwayProject\Backend\BusinessLogic\obj\Debug\net8.0\ref\BusinessLogic.dll
+C:\Users\sania\OneDrive\Робочий стіл\SelfStuding\RailwayProject\Backend\BusinessLogic\obj\Debug\net8.0\BusinessLogic.csproj.AssemblyReference.cache
