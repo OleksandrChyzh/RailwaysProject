@@ -1,34 +1,43 @@
 <div class="home-container">
   <header>
-    <h1>Railway Project</h1>
+    <div class="logo-nav">
+      <div class="logo">
+        <div class="logo-box">
+          <span class="logo-text">R</span>
+          <span class="logo-text">P</span>
+        </div>
+        <span class="logo-title">Railway Project</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a routerLink="/" routerLinkActive="active">Пошук квитків</a></li>
+          <li><a routerLink="/my-tickets" routerLinkActive="active">Мої квитки</a></li>
+          <li><a routerLink="/schedule" routerLinkActive="active">Табло</a></li>
+          <li><a routerLink="/profile" routerLinkActive="active">Профіль</a></li>
+        </ul>
+      </nav>
+    </div>
+    <button class="login-button">Увійти</button>
   </header>
 
-  <section id="about-us">
-    <h2>Про нас</h2>
-    <p>Ми пропонуємо швидке та зручне замовлення квитків на залізничний транспорт. Ласкаво просимо!</p>
-  </section>
+  <main class="search-section">
+    <div class="search-box">
+      <div class="search-option">
+        <label for="from">Звідки:</label>
+        <input type="text" id="from" name="from" placeholder="Виберіть станцію" />
+      </div>
 
-  <section id="book-tickets">
-    <h2>Замовити квитки</h2>
-    <form>
-      <label for="from">Звідки:</label>
-      <input type="text" id="from" name="from" placeholder="Виберіть станцію" />
+      <div class="search-option">
+        <label for="to">Куди:</label>
+        <input type="text" id="to" name="to" placeholder="Виберіть станцію" />
+      </div>
 
-      <label for="to">Куди:</label>
-      <input type="text" id="to" name="to" placeholder="Виберіть станцію" />
+      <div class="search-option">
+        <label for="date">Дата:</label>
+        <input type="date" id="date" name="date" />
+      </div>
 
-      <label for="date">Дата:</label>
-      <input type="date" id="date" name="date" />
-
-      <button type="submit">Замовити</button>
-    </form>
-  </section>
-
-
-  <section id="contact">
-    <h2>Контакти</h2>
-    <p>Телефон: +380XXXXXXXX</p>
-    <p>Email: support.railway&#64;gmail.com</p>
-  </section>
+      <button type="submit" class="search-button">Знайти</button>
+    </div>
+  </main>
 </div>
-
