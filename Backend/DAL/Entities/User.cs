@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DAL.Models;
+namespace DAL.Entities;
 
 public partial class User: BaseEntity
 {
