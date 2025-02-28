@@ -26,15 +26,15 @@ namespace BusinessLogic.Models
 
         [Required]
         [StringLength(50)]
-        public string TrainName { get; set; } = null!;  // Назва поїзда
+        public string TrainName { get; set; } = null!;  
 
         [Required]
         [StringLength(50)]
-        public string StartStationName { get; set; } = null!;  // Початкова станція
+        public string StartStationName { get; set; } = null!;  
 
         [Required]
         [StringLength(50)]
-        public string EndStationName { get; set; } = null!;  // Кінцева станція
+        public string EndStationName { get; set; } = null!; 
 
     }
 }

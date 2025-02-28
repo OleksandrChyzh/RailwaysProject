@@ -17,10 +17,7 @@ namespace BusinessLogic.Services
           where TEntity : BaseEntity
           where TModel : class
     {
-        protected abstract IRepository<TEntity> _repository
-        {
-            get;
-        }
+        protected abstract IRepository<TEntity> _repository { get; }
         protected readonly IUnitOfWork _uof;
         protected readonly IMapper _mapper;
 
@@ -29,11 +26,11 @@ namespace BusinessLogic.Services
             _uof = uof;
             _mapper = mapper;
         }
-        public virtual Task AddAsync(TModel model)
+        public virtual async Task AddAsync(TModel model)
         {
             Validate(model);
-            return _repository.AddAsync(_mapper.Map<TEntity>(model))
-            .ContinueWith(t => _uof.SaveAsync());
+            await _repository.AddAsync(_mapper.Map<TEntity>(model))
+            .ContinueWith(async t => await _uof.SaveAsync());
         }
 
         protected void Validate(object model)
@@ -55,30 +52,30 @@ namespace BusinessLogic.Services
 
         }
 
-        public virtual Task DeleteAsync(int modelId)
+        public virtual async Task DeleteAsync(int modelId)
         {
-            return _repository.DeleteByIdAsync(modelId)
-                .ContinueWith(t => _uof.SaveAsync());
+            await _repository.DeleteByIdAsync(modelId)
+                .ContinueWith(async t => await _uof.SaveAsync());
         }
 
-        public virtual Task<IEnumerable<TModel>> GetAllAsync()
+        public  virtual async Task<IEnumerable<TModel>> GetAllAsync()
         {
-            return _repository.GetAllAsync()
-                .ContinueWith(t => _mapper.Map<IEnumerable<TModel>>(t.Result));
+            var a = await _repository.GetAllAsync();
+            return _mapper.Map<IEnumerable<TModel>>(a);
         }
 
-        public virtual Task<TModel> GetByIdAsync(int id)
+        public  virtual async  Task<TModel> GetByIdAsync(int id)
         {
-            return _repository.GetByIdAsync(id)
+            return await _repository.GetByIdAsync(id)
                 .ContinueWith(t => _mapper.Map<TModel>(t.Result));
         }
 
-        public virtual Task UpdateAsync(TModel model)
+        public virtual async Task UpdateAsync(TModel model)
         {
             Validate(model);
             var entity = _mapper.Map<TEntity>(model);
-            _repository.Update(entity);
-            return _uof.SaveAsync();
+            _repository.UpdateAsync(entity);
+            await _uof.SaveAsync();
         }
     }
 }

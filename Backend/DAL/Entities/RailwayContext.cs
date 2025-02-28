@@ -96,9 +96,5 @@ public partial class RailwayContext : DbContext
             entity.Property(e => e.PhoneNumber).HasMaxLength(50);
             entity.Property(e => e.UserName).HasMaxLength(50);
         });
-
-        OnModelCreatingPartial(modelBuilder);
     }
-
-    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }

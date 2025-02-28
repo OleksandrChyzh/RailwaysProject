@@ -1,42 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
-using DAL.Interfaces;
 using DAL.Entities;
+using DAL.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace DAL.Repositories
 {
-        public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
-        {
+    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
+    {
         public DbContext _context { get; }
         public DbSet<TEntity> _dbSet { get; }
 
         public Repository(DbContext context)
         {
-            _context = (RailwayContext)context; // Явне приведення
+            _context = (RailwayContext)context;
             _dbSet = context.Set<TEntity>();
         }
-        public Task AddAsync(TEntity entity)
+
+        public async Task AddAsync(TEntity entity)
         {
-            _dbSet.Add(entity);
-            return _context.SaveChangesAsync();
+            await _dbSet.AddAsync(entity);
+            await _context.SaveChangesAsync();
         }
 
-        public void Delete(TEntity entity)
+        public async Task DeleteAsync(TEntity entity)
         {
             _dbSet.Remove(entity);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
-        public Task DeleteByIdAsync(int id)
+        public async Task DeleteByIdAsync(int id)
         {
-            TEntity entity = _dbSet.Find(id);
-            Delete(entity);
-            return _context.SaveChangesAsync();
+            var entity = await _dbSet.FindAsync(id);
+            if (entity != null)
+            {
+                await DeleteAsync(entity);
+            }
         }
 
         public async Task<IEnumerable<TEntity>> GetAllAsync()
@@ -44,19 +45,20 @@ namespace DAL.Repositories
             return await _dbSet.ToListAsync();
         }
 
-        public Task<TEntity> GetByIdAsync(int id)
+        public async Task<TEntity> GetByIdAsync(int id)
         {
-            return _dbSet.FindAsync(id).AsTask();
+            return await _dbSet.FindAsync(id);
         }
 
-        public void Update(TEntity entity)
+        public async Task UpdateAsync(TEntity entity)
         {
             if (_context.Entry(entity).State == EntityState.Detached)
             {
                 _dbSet.Attach(entity);
-                _context.Entry(entity).State = EntityState.Modified;
             }
+            _context.Entry(entity).State = EntityState.Modified;
+
+            await _context.SaveChangesAsync();
         }
     }
-
 }

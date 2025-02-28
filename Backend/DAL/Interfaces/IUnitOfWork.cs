@@ -16,7 +16,7 @@ namespace DAL.Interfaces
         ITrainRepository TrainRepository { get; }
         IUserRepository UserRepository { get; }
 
-        public IRepository<TEntity> GetRepository<TEntity>() where TEntity : BaseEntity;
+        IRepository<TEntity> GetRepository<TEntity>() where TEntity : BaseEntity;
 
         Task SaveAsync();
 

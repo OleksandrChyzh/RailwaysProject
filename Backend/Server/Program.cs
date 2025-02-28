@@ -23,3 +23,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+//  форматування
+// асинхронність і асп еф 
