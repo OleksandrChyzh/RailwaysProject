@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using BusinessLogic.Interfaces;
 using BusinessLogic.Models;
+using BusinessLogic.Validation; 
 using DAL.Entities;
 using DAL.Interfaces;
-using System;
 using System.Threading.Tasks;
 
 namespace BusinessLogic.Services
@@ -18,7 +18,7 @@ namespace BusinessLogic.Services
             : base(uof, mapper)
         {
             _userRepository = uof.UserRepository;
-            _repository = _userRepository; 
+            _repository = _userRepository;
         }
 
         public async Task<UserModel> GetUserByEmail(string email)
@@ -27,7 +27,7 @@ namespace BusinessLogic.Services
 
             if (user is null)
             {
-                throw new KeyNotFoundException($"Користувача з email '{email}' не знайдено.");
+                throw new UserNotFoundException(email); 
             }
 
             return _mapper.Map<UserModel>(user);
