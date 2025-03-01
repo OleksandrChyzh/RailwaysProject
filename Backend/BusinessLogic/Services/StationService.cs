@@ -6,9 +6,9 @@ using DAL.Interfaces;
 
 namespace BusinessLogic.Services
 {
-    public class StationService : GenericService<Station, StationModel>, IStationSevice
+    public class StationService : GenericService<Station, StationModel>, IStationService
     {
-        protected override IRepository<Station> _repository { get; }
+        protected override IRepository<Station> _repository { get; set; }
 
         public StationService(IUnitOfWork uof, IMapper mapper)
             : base(uof, mapper)

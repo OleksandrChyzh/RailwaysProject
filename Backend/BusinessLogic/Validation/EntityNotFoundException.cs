@@ -12,5 +12,11 @@ namespace BusinessLogic.Validation
             : base($"{entityName} with id {id} was not found.")
         {
         }
+
+        public EntityNotFoundException(string entityName, string propertyName, string propertyValue)
+            : base($"{entityName} with {propertyName} {propertyValue} was not found.")
+        {
+        }
+
     }
 }

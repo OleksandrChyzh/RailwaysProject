@@ -7,7 +7,7 @@ using BusinessLogic.Models;
 
 namespace BusinessLogic.Interfaces
 {
-    internal interface ITicketService : ICrud<TicketModel>
+    public interface ITicketService : ICrud<TicketModel>
     {
     }
 }

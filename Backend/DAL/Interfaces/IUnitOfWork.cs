@@ -19,6 +19,5 @@ namespace DAL.Interfaces
         IRepository<TEntity> GetRepository<TEntity>() where TEntity : BaseEntity;
 
         Task SaveAsync();
-
     }
 }

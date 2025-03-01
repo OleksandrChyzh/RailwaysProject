@@ -7,7 +7,7 @@ using BusinessLogic.Models;
 
 namespace BusinessLogic.Interfaces
 {
-    internal interface IStationSevice : ICrud<StationModel>
+    public interface IStationService : ICrud<StationModel>
     {
     }
 }

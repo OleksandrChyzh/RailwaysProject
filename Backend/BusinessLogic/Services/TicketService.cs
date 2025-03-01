@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic.Services
 {
-    internal class TicketService : GenericService<Ticket, TicketModel>, ITicketService
+    public class TicketService : GenericService<Ticket, TicketModel>, ITicketService
     {
-        protected override IRepository<Ticket> _repository { get; }
+        protected override IRepository<Ticket> _repository { get; set; }
 
         public TicketService(IUnitOfWork uof, IMapper mapper)
             : base(uof, mapper)

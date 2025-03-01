@@ -434,9 +434,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sania\\OneDrive\\Робочий стіл\\SelfStuding\\RailwayProject\\Backend\\Server\\Server.csproj",
-      "projectName": "Server",
-      "projectPath": "C:\\Users\\sania\\OneDrive\\Робочий стіл\\SelfStuding\\RailwayProject\\Backend\\Server\\Server.csproj",
+      "projectUniqueName": "C:\\Users\\sania\\OneDrive\\Робочий стіл\\SelfStuding\\RailwayProject\\Backend\\Server\\WebApi.csproj",
+      "projectName": "WebApi",
+      "projectPath": "C:\\Users\\sania\\OneDrive\\Робочий стіл\\SelfStuding\\RailwayProject\\Backend\\Server\\WebApi.csproj",
       "packagesPath": "C:\\Users\\sania\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\sania\\OneDrive\\Робочий стіл\\SelfStuding\\RailwayProject\\Backend\\Server\\obj\\",
       "projectStyle": "PackageReference",

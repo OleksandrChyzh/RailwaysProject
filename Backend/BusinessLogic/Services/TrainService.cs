@@ -1,17 +1,18 @@
 ﻿using AutoMapper;
 using BusinessLogic.Interfaces;
 using BusinessLogic.Models;
+using BusinessLogic.Validation;
 using DAL.Entities;
 using DAL.Interfaces;
-using DAL.Repositories;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace BusinessLogic.Services
 {
     public class TrainService : GenericService<Train, TrainModel>, ITrainService
     {
-        protected override IRepository<Train> _repository { get; }
+        protected override IRepository<Train> _repository { get; set; }
 
         public TrainService(IUnitOfWork uof, IMapper mapper)
             : base(uof, mapper)
@@ -30,10 +31,10 @@ namespace BusinessLogic.Services
 
             if (!filteredTrains.Any() || station1.Id >= station2.Id)
             {
-                throw new InvalidOperationException("Немає поїздів за заданим маршрутом");
+                throw new InvalidRouteException("Немає поїздів за заданим маршрутом");
             }
+
             return _mapper.Map<IEnumerable<TrainModel>>(filteredTrains);
         }
-
     }
 }

@@ -8,7 +8,7 @@ using BusinessLogic.Models;
 
 namespace BusinessLogic.Interfaces
 {
-    internal interface IUserService : ICrud<UserModel>
+    public interface IUserService : ICrud<UserModel>
     {
         Task<UserModel> GetUserByEmail (string email);
     }

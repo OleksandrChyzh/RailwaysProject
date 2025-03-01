@@ -8,7 +8,7 @@ using BusinessLogic.Models;
 
 namespace BusinessLogic.Interfaces
 {
-    internal interface ITrainService : ICrud<TrainModel>
+    public interface ITrainService : ICrud<TrainModel>
     {
         Task<IEnumerable<TrainModel>> GetTrainsByTwoStations(StationModel station1, StationModel ststion2);
     }

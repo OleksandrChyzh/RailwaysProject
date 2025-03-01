@@ -3,10 +3,8 @@ using BusinessLogic.Interfaces;
 using BusinessLogic.Validation;
 using DAL.Entities;
 using DAL.Interfaces;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLogic.Services
 {
@@ -14,13 +12,14 @@ namespace BusinessLogic.Services
           where TEntity : BaseEntity
           where TModel : class
     {
-        protected abstract IRepository<TEntity> _repository { get; }
+        protected abstract IRepository<TEntity> _repository { get; set; }
         protected readonly IUnitOfWork _uof;
         protected readonly IMapper _mapper;
 
         protected GenericService(IUnitOfWork uof, IMapper mapper)
         {
             _uof = uof;
+            _repository = uof.GetRepository<TEntity>();
             _mapper = mapper;
         }
 

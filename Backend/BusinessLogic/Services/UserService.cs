@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using BusinessLogic.Interfaces;
 using BusinessLogic.Models;
-using BusinessLogic.Validation; 
+using BusinessLogic.Validation;
 using DAL.Entities;
 using DAL.Interfaces;
 using System.Threading.Tasks;
@@ -10,7 +10,7 @@ namespace BusinessLogic.Services
 {
     public class UserService : GenericService<User, UserModel>, IUserService
     {
-        protected override IRepository<User> _repository { get; }
+        protected override IRepository<User> _repository { get; set; }
 
         private readonly IUserRepository _userRepository;
 
@@ -27,7 +27,7 @@ namespace BusinessLogic.Services
 
             if (user is null)
             {
-                throw new UserNotFoundException(email); 
+                throw new EntityNotFoundException(nameof(User), "email", email);
             }
 
             return _mapper.Map<UserModel>(user);
