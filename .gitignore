@@ -15,3 +15,4 @@ Backend/Server/obj/Server.csproj.nuget.dgspec.json
 Backend/Server/obj/project.assets.json
 Backend/Server/obj/project.nuget.cache
 Backend/BusinessLogic/
+Backend/Server/obj/
