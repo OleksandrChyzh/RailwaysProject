@@ -1,1 +1,17 @@
 .vs/
+.Backend/BusinessLogic/obj/BusinessLogic.csproj.nuget.dgspec.json
+.Backend/BusinessLogic/obj/Debug/net8.0/BusinessLogig.AssemblyInfo.cs
+.Backend/BusinessLogic/obj/Debug/net8.0/BusinessLogic.AssemblyInfoInputs.cache
+.Backend/BusinessLogic/obj/Debug/net8.0/BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+.Backend/BusinessLogic/obj/Debug/net8.0/BusinessLogic.assets.cache
+.Backend/BusinessLogic/obj/Debug/net8.0/BusinessLogic.csproj.AssemblyReference.cache
+.Backend/BusinessLogic/obj/project.assets.json
+.Backend/BusinessLogic/obj/project.nuget.cache
+.Backend/Server/obj/Debug/net8.0/Server.AssemblyInfo.cs
+.Backend/Server/obj/Debug/net8.0/Server.AssemblyInfoInputs.cache
+.Backend/Server/obj/Debug/net8.0/Server.GeneratedMSBuildEditorConfig.editorconfig
+.Backend/Server/obj/Debug/net8.0/Server.assets/cache
+.Backend/Server/obj/Server.csproj.nuget.dgspec.json
+.Backend/Server/obj/project.assets.json
+.Backend/Server/obj/project.nuget.cache
+

@@ -4,17 +4,14 @@
   display: block;
 }
 
-/* Загальний текст - Poppins */
 .home-container {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Заголовки - Merriweather */
 h1, h2, h3, .welcome-title {
   font-family: 'Merriweather', serif;
 }
 
-/* Додаткові стилі для прикраси */
 .welcome-title {
   font-size: 2rem;
   font-weight: 700;
@@ -31,9 +28,6 @@ h1, h2, h3, .welcome-title {
   color: #2A6ACF;
 }
 
-
-
-/* Загальний фон */
 body {
   background: linear-gradient(135deg, #34495e, #2c3e50);
   font-family: 'Arial', sans-serif;
@@ -42,7 +36,6 @@ body {
   color: #ecf0f1;
 }
 
-/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -53,7 +46,6 @@ header {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Логотип та навігація */
 .logo-nav {
   display: flex;
   align-items: center;
@@ -91,8 +83,8 @@ header {
 }
 
 nav {
-  display: flex;  Робить навігацію горизонтальною 
-  align-items: center;  Вирівнює меню по вертикалі 
+  display: flex;   
+  align-items: center;   
 }
 
 
@@ -122,7 +114,6 @@ nav ul {
         background-color: #1abc9c;
       }
 
-/* Кнопка Увійти */
 .login-button {
   background-color: #1abc9c;
   color: white;
@@ -134,7 +125,6 @@ nav ul {
   transition: background-color 0.3s;
 }
 
-/* Основний текст */
 .welcome-title {
   text-align: center;
   margin-bottom: 20px;
@@ -146,7 +136,6 @@ nav ul {
   text-align: justify;
 }
 
-/* Функції */
 .features-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -174,7 +163,6 @@ nav ul {
   color: #3498db;
 }
 
-/* Пошуковий блок */
 .search-section {
   display: flex;
   justify-content: center;
@@ -242,7 +230,6 @@ nav ul {
   }
 
 
-/* Секція привітання */
 .welcome-section {
   background-color: #f8f9fa;
   border: 2px solid #1abc9c;
