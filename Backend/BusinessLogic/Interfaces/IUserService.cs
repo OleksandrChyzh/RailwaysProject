@@ -11,5 +11,7 @@ namespace BusinessLogic.Interfaces
     public interface IUserService : ICrud<UserModel>
     {
         Task<UserModel> GetUserByEmail (string email);
+        
+        Task DeleteAsync(string email);
     }
 }

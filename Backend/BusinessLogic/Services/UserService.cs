@@ -32,5 +32,18 @@ namespace BusinessLogic.Services
 
             return _mapper.Map<UserModel>(user);
         }
+
+        public async Task DeleteAsync(string email)
+        {
+            var user = await _userRepository.GetByEmailAsync(email);
+
+            if (user is null)
+            {
+                throw new EntityNotFoundException(nameof(User), "email", email);
+            }
+
+            await _repository.DeleteAsync(user);
+            await _uof.SaveAsync();
+        }
     }
 }
