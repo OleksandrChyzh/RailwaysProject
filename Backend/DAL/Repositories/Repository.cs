@@ -13,9 +13,9 @@ namespace DAL.Repositories
         public DbContext _context { get; }
         public DbSet<TEntity> _dbSet { get; }
 
-        public Repository(DbContext context)
+        public Repository(RailwayContext context)
         {
-            _context = (RailwayContext)context;
+            _context = context;
             _dbSet = context.Set<TEntity>();
         }
 

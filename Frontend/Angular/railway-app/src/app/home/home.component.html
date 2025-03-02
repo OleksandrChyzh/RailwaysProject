@@ -1,0 +1,81 @@
+<div class="home-container">
+  <header>
+    <div class="logo-nav">
+      <div class="logo">
+        <div class="logo-box">
+          <span class="logo-text">R</span>
+          <span class="logo-text">P</span>
+        </div>
+        <span class="logo-title">Railway Project</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a routerLink="/" routerLinkActive="active">Пошук квитків</a></li>
+          <li><a routerLink="/my-tickets" routerLinkActive="active">Мої квитки</a></li>
+          <li><a routerLink="/schedule" routerLinkActive="active">Табло</a></li>
+          <li><a routerLink="/profile" routerLinkActive="active">Профіль</a></li>
+        </ul>
+      </nav>
+    </div>
+    <button class="login-button">Увійти</button>
+  </header>
+
+  <div></div>
+
+  <main class="main-content">
+    <section class="search-section">
+      <div class="search-box">
+        <div class="search-option">
+          <label for="from">Звідки:</label>
+          <input type="text" id="from" name="from" placeholder="Виберіть станцію" />
+        </div>
+
+        <div class="search-option">
+          <label for="to">Куди:</label>
+          <input type="text" id="to" name="to" placeholder="Виберіть станцію" />
+        </div>
+
+        <div class="search-option">
+          <label for="date">Дата:</label>
+          <input type="date" id="date" name="date" />
+        </div>
+
+        <button type="submit" class="search-button">Знайти</button>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <div class="welcome-section">
+        <h2 class="welcome-title">Ласкаво просимо до Railway Project!</h2>
+        <p class="welcome-text">
+          Наш сервіс допоможе вам <span class="highlight">швидко знайти</span> та <span class="highlight">придбати квитки</span> на потяги.
+          Знаходьте актуальний розклад, відстежуйте ваші квитки, та подорожуйте з комфортом.
+        </p>
+      </div>
+
+
+      <div class="features-section">
+        <div class="feature">
+          <div class="feature-icon">🔍</div>
+          <h3>Швидкий пошук квитків</h3>
+          <p>Легко знаходьте потрібний рейс та обирайте оптимальний варіант.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📒</div>
+          <h3>Збереження ваших поїздок</h3>
+          <p>Усі ваші квитки завжди доступні в профілі.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⏱️</div>
+          <h3>Актуальний розклад руху</h3>
+          <p>Отримуйте тільки найсвіжішу інформацію.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">👤</div>
+          <h3>Зручний доступ до профілю</h3>
+          <p>Керуйте своїми поїздками швидко та просто.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>

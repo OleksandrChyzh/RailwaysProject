@@ -1,0 +1,22 @@
+nav {
+  display: flex;
+  gap: 15px;
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+  a.active {
+    color: blue;
+  }
+
+  a:hover {
+    color: darkblue;
+  }
