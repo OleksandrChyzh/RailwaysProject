@@ -361,15 +361,12 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
-Backend/DAL/bin
-Backend/DAL/obj
-
-Backend/BusinessLogic/bin
-Backend/BusinessLogic/obj
+**/bin/
+**/obj/
 
 
-Backend/WebApi/bin
-Backend/WebApi/obj
+**/bin
+**/obj
 
 
  
