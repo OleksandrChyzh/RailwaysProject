@@ -20,3 +20,8 @@ a {
   a:hover {
     color: darkblue;
   }
+
+html, body{
+  padding: 0;
+  margin: 0 !important;
+}
