@@ -1,0 +1,40 @@
+.tickets-container {
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #34495e;
+    margin-bottom: 15px;
+  }
+  
+  .tickets-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .no-tickets {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    padding: 10px;
+  }
+  
+  
