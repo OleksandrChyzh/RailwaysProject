@@ -21,8 +21,10 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddAutoMapper(typeof(AutomapperProfile));
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+// Підключення до PostgreSQL
 builder.Services.AddDbContext<RailwayContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
