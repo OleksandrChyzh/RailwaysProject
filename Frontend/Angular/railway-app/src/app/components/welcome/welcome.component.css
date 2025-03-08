@@ -1,0 +1,35 @@
+  /*Основний текст*/
+  .welcome-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* Секція привітання */
+  .welcome-section {
+    background-color: #f8f9fa;
+    border: 2px solid #1abc9c;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .welcome-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 15px;
+  }
+  
+  .welcome-text {
+    font-size: 1.2em;
+    color: #34495e;
+    line-height: 1.6;
+  }
+  
+    .welcome-text .highlight {
+      color: #1abc9c;
+      font-weight: bold;
+    }

@@ -1,0 +1,14 @@
+/* Оновлюємо шрифти у features */
+app-feature h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4em;
+    color: #3498db;
+    margin-bottom: 10px;
+  }
+  
+  app-feature p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    color: #2c3e50;
+  }
+  

@@ -1,0 +1,49 @@
+/* Стилі для секції features */
+.features-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 рівні колонки */
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* Окремий блок feature */
+app-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+app-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Іконки у features */
+app-feature .feature-icon {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+/* Заголовок */
+app-feature h3 {
+  font-size: 1.4em;
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+/* Текст опису */
+app-feature p {
+  font-size: 1.1em;
+  color: #2c3e50;
+}
+
+  
+
