@@ -11,5 +11,6 @@ namespace BusinessLogic.Interfaces
     public interface ITrainService : ICrud<TrainModel>
     {
         Task<IEnumerable<TrainModel>> GetTrainsByTwoStations(StationModel station1, StationModel ststion2);
+        Task<IEnumerable<TrainModel>> GetTrainsByStation(StationModel station);
     }
 }

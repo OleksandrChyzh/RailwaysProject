@@ -74,6 +74,22 @@ namespace WebApi.Controllers
             }
         }
 
+        // GET: api/users/phone/{phoneNumber}
+        [HttpGet("phone/{phoneNumber}")]
+        public async Task<ActionResult<UserModel>> GetByPhoneNumber(string phoneNumber)
+        {
+            try
+            {
+                var user = await _userService.GetUserByPhoneNumber(phoneNumber);
+                return Ok(user);
+            }
+            catch (RailwaysException ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+
+
         // DELETE: api/users/{email}
         [HttpDelete("{email}")]
         public async Task<ActionResult> Delete(string email)

@@ -36,5 +36,22 @@ namespace BusinessLogic.Services
 
             return _mapper.Map<IEnumerable<TrainModel>>(filteredTrains);
         }
+
+        public async Task<IEnumerable<TrainModel>> GetTrainsByStation(StationModel station)
+        {
+            var trains = await _repository.GetAllAsync();
+
+            var filteredTrains = trains
+                .Where(train => train.StationsTrains.Any(st => st.StationId == station.Id))
+                .ToList();
+
+            if (!filteredTrains.Any())
+            {
+                throw new InvalidRouteException($"Немає поїздів, які проходять через станцію з ID {station.Id}");
+            }
+
+            return _mapper.Map<IEnumerable<TrainModel>>(filteredTrains);
+        }
+
     }
 }

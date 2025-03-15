@@ -17,5 +17,10 @@ namespace DAL.Repositories
         {
             return await (_context as RailwayContext)!.Users.FirstOrDefaultAsync(u => u.Email == email);
         }
+
+        public async Task<User?> GetByPhoneNumberAsync(string phoneNumber)
+        {
+            return await (_context as RailwayContext)!.Users.FirstOrDefaultAsync(u => u.PhoneNumber == phoneNumber);
+        }
     }
 }

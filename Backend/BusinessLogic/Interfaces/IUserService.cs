@@ -13,5 +13,7 @@ namespace BusinessLogic.Interfaces
         Task<UserModel> GetUserByEmail (string email);
         
         Task DeleteAsync(string email);
+
+        Task<UserModel> GetUserByPhoneNumber(string phoneNumber);
     }
 }

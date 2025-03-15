@@ -33,6 +33,18 @@ namespace BusinessLogic.Services
             return _mapper.Map<UserModel>(user);
         }
 
+        public async Task<UserModel> GetUserByPhoneNumber(string phoneNumber)
+        {
+            var user = await _userRepository.GetByPhoneNumberAsync(phoneNumber);
+
+            if (user is null)
+            {
+                throw new EntityNotFoundException(nameof(User), "phone number", phoneNumber);
+            }
+
+            return _mapper.Map<UserModel>(user);
+        }
+
         public async Task DeleteAsync(string email)
         {
             var user = await _userRepository.GetByEmailAsync(email);

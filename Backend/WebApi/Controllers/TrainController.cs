@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using BusinessLogic.Interfaces;
 using BusinessLogic.Models;
 using BusinessLogic.Validation;
+using DAL.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers
@@ -89,6 +90,26 @@ namespace WebApi.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        // GET: api/trains/by-station? stationId = 1
+        [HttpGet("by-station")]
+        public async Task<ActionResult<IEnumerable<TrainModel>>> GetByStation([FromQuery] int stationId)
+        {
+            try
+            {
+                var trains = await _trainService.GetTrainsByStation(new StationModel { Id = stationId });
+                return Ok(trains);
+            }
+            catch (EntityNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (RailwaysException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
 
         // DELETE: api/trains/5
         [HttpDelete("{id}")]
