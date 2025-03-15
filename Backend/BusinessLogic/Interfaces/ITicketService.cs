@@ -9,5 +9,7 @@ namespace BusinessLogic.Interfaces
 {
     public interface ITicketService : ICrud<TicketModel>
     {
+        Task<IEnumerable<TicketModel>> GetAvailableTicketsAsync();
+        Task<IEnumerable<TicketModel>> GetTicketHistoryAsync();
     }
 }
