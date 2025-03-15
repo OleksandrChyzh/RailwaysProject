@@ -1,21 +1,25 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace DAL.Migrations
 {
-    public partial class AddDateToTicket : Migration
+    /// <inheritdoc />
+    public partial class AddDateToTicketFixed : Migration
     {
+        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<DateTime>(
                 name: "Date",
                 table: "Tickets",
-                type: "timestamp",
+                type: "timestamp without time zone",
                 nullable: false,
-                defaultValue: DateTime.UtcNow); // Можна змінити defaultValue на інше значення
+                defaultValueSql: "CURRENT_TIMESTAMP"); // Використовуємо SQL-функцію
         }
 
+        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
