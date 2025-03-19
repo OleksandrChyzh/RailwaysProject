@@ -5,7 +5,7 @@ namespace BusinessLogic.Models
     public class StationModel
     {
         [Key]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [StringLength(50)]

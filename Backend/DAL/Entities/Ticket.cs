@@ -15,9 +15,9 @@ public partial class Ticket: BaseEntity
 
     public long SeatNumber { get; set; }
 
-    public long StationTrainId1 { get; set; }
+    public int StationTrainId1 { get; set; }
 
-    public long StationTrainId2 { get; set; }
+    public int StationTrainId2 { get; set; }
 
     public DateTime Date { get; set; } = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Utc);
     public virtual StationsTrain StationTrainId2Navigation { get; set; } = null!;

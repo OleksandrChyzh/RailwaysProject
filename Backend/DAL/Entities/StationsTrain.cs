@@ -6,11 +6,11 @@ namespace DAL.Entities;
 public partial class StationsTrain: BaseEntity
 {
 
-    public long TrainNumber { get; set; }
+    public int TrainNumber { get; set; }
 
     public TimeOnly ArrivalTime { get; set; }
 
-    public long? StationId { get; set; }
+    public int? StationId { get; set; }
 
     public virtual Station? Station { get; set; }
 
