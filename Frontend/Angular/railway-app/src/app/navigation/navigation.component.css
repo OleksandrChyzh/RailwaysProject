@@ -89,3 +89,18 @@ nav ul {
   transition: background-color 0.3s;
 }
   
+.register-button, .login-button {
+  background-color: #1abc9c;
+  color: white;
+  padding: 10px 15px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.register-button:hover, .login-button:hover {
+  background-color: #16a085;
+}
